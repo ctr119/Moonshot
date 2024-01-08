@@ -18,6 +18,8 @@
 		206BA42C2B4784790036C240 /* FileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA42B2B4784790036C240 /* FileDataSource.swift */; };
 		206BA42E2B4785440036C240 /* AstronautsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA42D2B4785440036C240 /* AstronautsRepository.swift */; };
 		206BA4302B4787400036C240 /* AstronautDTO+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */; };
+		206BA4322B4CA4180036C240 /* GetAstronautsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */; };
+		206BA4342B4CA5410036C240 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA4332B4CA5410036C240 /* ContentViewModel.swift */; };
 		20E917A72B3B952100A49299 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E917A62B3B952100A49299 /* MoonshotApp.swift */; };
 		20E917A92B3B952100A49299 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E917A82B3B952100A49299 /* ContentView.swift */; };
 		20E917AB2B3B952200A49299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E917AA2B3B952200A49299 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		206BA42B2B4784790036C240 /* FileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataSource.swift; sourceTree = "<group>"; };
 		206BA42D2B4785440036C240 /* AstronautsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsRepository.swift; sourceTree = "<group>"; };
 		206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AstronautDTO+Domain.swift"; sourceTree = "<group>"; };
+		206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAstronautsUseCase.swift; sourceTree = "<group>"; };
+		206BA4332B4CA5410036C240 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		20E917A32B3B952100A49299 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E917A62B3B952100A49299 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		20E917A82B3B952100A49299 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		206BA4222B4780D40036C240 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				20E917A82B3B952100A49299 /* ContentView.swift */,
+				206BA4332B4CA5410036C240 /* ContentViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 		206BA4232B4780DA0036C240 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */,
 				206BA4282B4783520036C240 /* Models */,
 			);
 			path = Domain;
@@ -198,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				20E917AC2B3B952200A49299 /* Moonshot.entitlements */,
-				20E917A82B3B952100A49299 /* ContentView.swift */,
 				20E917A62B3B952100A49299 /* MoonshotApp.swift */,
 				20E917AA2B3B952200A49299 /* Assets.xcassets */,
 				206BA4202B4780C40036C240 /* Clean */,
@@ -367,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				206BA4162B4778D90036C240 /* NavigationStackEx.swift in Sources */,
+				206BA4342B4CA5410036C240 /* ContentViewModel.swift in Sources */,
 				206BA42E2B4785440036C240 /* AstronautsRepository.swift in Sources */,
+				206BA4322B4CA4180036C240 /* GetAstronautsUseCase.swift in Sources */,
 				20E917A92B3B952100A49299 /* ContentView.swift in Sources */,
 				206BA4302B4787400036C240 /* AstronautDTO+Domain.swift in Sources */,
 				206BA4142B4745170036C240 /* ScrollEx.swift in Sources */,

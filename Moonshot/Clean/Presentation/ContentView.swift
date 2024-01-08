@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var viewModel = ContentViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
+        VStack(spacing: 16) {
+            Image(systemName: "moon.stars")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("^[\(viewModel.astronauts.count) astronaut](inflect: true)")
         }
         .padding()
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 
