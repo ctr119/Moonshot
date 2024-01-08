@@ -20,6 +20,7 @@
 		206BA4302B4787400036C240 /* AstronautDTO+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */; };
 		206BA4322B4CA4180036C240 /* GetAstronautsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */; };
 		206BA4342B4CA5410036C240 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA4332B4CA5410036C240 /* ContentViewModel.swift */; };
+		206BA4372B4CA8E00036C240 /* FileDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BA4362B4CA8E00036C240 /* FileDecoder.swift */; };
 		20E917A72B3B952100A49299 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E917A62B3B952100A49299 /* MoonshotApp.swift */; };
 		20E917A92B3B952100A49299 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E917A82B3B952100A49299 /* ContentView.swift */; };
 		20E917AB2B3B952200A49299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E917AA2B3B952200A49299 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AstronautDTO+Domain.swift"; sourceTree = "<group>"; };
 		206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAstronautsUseCase.swift; sourceTree = "<group>"; };
 		206BA4332B4CA5410036C240 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		206BA4362B4CA8E00036C240 /* FileDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecoder.swift; sourceTree = "<group>"; };
 		20E917A32B3B952100A49299 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E917A62B3B952100A49299 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		20E917A82B3B952100A49299 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,8 +133,8 @@
 		206BA4212B4780CE0036C240 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */,
 				206BA42D2B4785440036C240 /* AstronautsRepository.swift */,
+				206BA4252B4783310036C240 /* DTOs */,
 				206BA4242B47831F0036C240 /* DataSources */,
 			);
 			path = Data;
@@ -159,8 +161,7 @@
 		206BA4242B47831F0036C240 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				206BA42B2B4784790036C240 /* FileDataSource.swift */,
-				206BA4252B4783310036C240 /* DTOs */,
+				206BA4352B4CA8A10036C240 /* FileDataSource */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -168,6 +169,7 @@
 		206BA4252B4783310036C240 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */,
 				206BA4262B47833F0036C240 /* AstronautDTO.swift */,
 			);
 			path = DTOs;
@@ -179,6 +181,15 @@
 				206BA4292B47835D0036C240 /* Astronaut.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		206BA4352B4CA8A10036C240 /* FileDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				206BA42B2B4784790036C240 /* FileDataSource.swift */,
+				206BA4362B4CA8E00036C240 /* FileDecoder.swift */,
+			);
+			path = FileDataSource;
 			sourceTree = "<group>";
 		};
 		20E9179A2B3B952100A49299 = {
@@ -380,6 +391,7 @@
 				206BA4302B4787400036C240 /* AstronautDTO+Domain.swift in Sources */,
 				206BA4142B4745170036C240 /* ScrollEx.swift in Sources */,
 				206BA42A2B47835D0036C240 /* Astronaut.swift in Sources */,
+				206BA4372B4CA8E00036C240 /* FileDecoder.swift in Sources */,
 				20E917A72B3B952100A49299 /* MoonshotApp.swift in Sources */,
 				206BA42C2B4784790036C240 /* FileDataSource.swift in Sources */,
 				206BA41A2B477ACD0036C240 /* GridEx.swift in Sources */,
