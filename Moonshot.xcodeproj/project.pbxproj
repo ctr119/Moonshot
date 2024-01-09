@@ -171,7 +171,7 @@
 		206BA4242B47831F0036C240 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				206BA4352B4CA8A10036C240 /* FileDataSource */,
+				206BA4352B4CA8A10036C240 /* DataSourceFile */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -195,13 +195,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		206BA4352B4CA8A10036C240 /* FileDataSource */ = {
+		206BA4352B4CA8A10036C240 /* DataSourceFile */ = {
 			isa = PBXGroup;
 			children = (
 				206BA42B2B4784790036C240 /* FileDataSource.swift */,
 				206BA4362B4CA8E00036C240 /* FileDecoder.swift */,
 			);
-			path = FileDataSource;
+			path = DataSourceFile;
 			sourceTree = "<group>";
 		};
 		20E9179A2B3B952100A49299 = {
