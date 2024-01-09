@@ -7,19 +7,15 @@
 
 import Foundation
 
-class MissionsDataSource: FileDataSource {
-    private let decoder: FileDecoder
+class MissionsDataSource {
+    private let client: FileClient
     
-    init(decoder: FileDecoder = .init()) {
-        self.decoder = decoder
+    init(client: FileClient = .init()) {
+        self.client = client
     }
     
-    func getMissions() throws -> [MissionDTO] {
-        guard let fileData = getJsonData(from: "missions") else {
-            fatalError("Cannot load missions.json content")
-        }
-        
-        guard let missionsDTO: [MissionDTO] = try? decoder.decode(data: fileData) else {
+    func getMissions() throws -> [MissionDTO] {        
+        guard let missionsDTO: [MissionDTO] = try? client.readData(from: "missions") else {
             fatalError("Cannot decode missions")
         }
         

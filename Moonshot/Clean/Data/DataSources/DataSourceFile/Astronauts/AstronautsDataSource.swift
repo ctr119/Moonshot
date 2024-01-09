@@ -7,19 +7,15 @@
 
 import Foundation
 
-class AstronautsDataSource: FileDataSource {
-    private let decoder: FileDecoder
+class AstronautsDataSource {
+    private let client: FileClient
     
-    init(decoder: FileDecoder = .init()) {
-        self.decoder = decoder
+    init(client: FileClient = .init()) {
+        self.client = client
     }
     
-    func getAstronautsContent() throws -> [String: AstronautDTO] {
-        guard let fileData = getJsonData(from: "astronauts") else {
-            fatalError("Cannot load astronauts.json content")
-        }
-        
-        guard let astronautsDTO: [String: AstronautDTO] = try? decoder.decode(data: fileData) else {
+    func getAstronautsContent() throws -> [String: AstronautDTO] {        
+        guard let astronautsDTO: [String: AstronautDTO] = try? client.readData(from: "astronauts") else {
             fatalError("Cannot parse astronauts data into DTOs")
         }
         
