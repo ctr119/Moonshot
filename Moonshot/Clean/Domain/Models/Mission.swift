@@ -10,12 +10,12 @@ import Foundation
 struct Mission {
     struct CrewMember {
         enum Role: String {
-            case commander = "Commander"
-            case commandModulePilot = "Command Module Pilot"
-            case lunarModulePilot = "Lunar Module Pilot"
-            case commandPilot = "Command Pilot"
-            case seniorPilot = "Senior Pilot"
-            case pilot = "Pilot"
+            case commander = "commander"
+            case commandModulePilot = "command module pilot"
+            case lunarModulePilot = "lunar module pilot"
+            case commandPilot = "command pilot"
+            case seniorPilot = "senior pilot"
+            case pilot = "pilot"
         }
         
         let astronaut: Astronaut
