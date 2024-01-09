@@ -9,13 +9,13 @@ import Foundation
 
 class MissionsRepository {
     private let astronautsRepository: AstronautsRepository
-    private let dataSource: FileDataSource
+    private let dataSource: MissionsDataSource
     private let missionConverter: MissionConverter
     
     init(
-        astronautsRepository: AstronautsRepository,
-        dataSource: FileDataSource,
-        missionConverter: MissionConverter
+        astronautsRepository: AstronautsRepository = .init(),
+        dataSource: MissionsDataSource = .init(),
+        missionConverter: MissionConverter = .init()
     ) {
         self.astronautsRepository = astronautsRepository
         self.dataSource = dataSource

@@ -8,9 +8,9 @@
 import Foundation
 
 class AstronautsRepository {
-    private let dataSource: FileDataSource
+    private let dataSource: AstronautsDataSource
     
-    init(dataSource: FileDataSource = .init()) {
+    init(dataSource: AstronautsDataSource = .init()) {
         self.dataSource = dataSource
     }
     
