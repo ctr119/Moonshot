@@ -16,6 +16,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("^[\(viewModel.astronauts.count) astronaut](inflect: true)")
+            Text("^[\(viewModel.missions.count) mission](inflect: true)")
         }
         .padding()
         .onAppear {
