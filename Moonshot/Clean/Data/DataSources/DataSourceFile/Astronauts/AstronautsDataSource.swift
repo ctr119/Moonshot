@@ -15,10 +15,6 @@ class AstronautsDataSource {
     }
     
     func getAstronautsContent() throws -> [String: AstronautDTO] {        
-        guard let astronautsDTO: [String: AstronautDTO] = try? client.readData(from: "astronauts") else {
-            fatalError("Cannot parse astronauts data into DTOs")
-        }
-        
-        return astronautsDTO
+        try client.readData(from: "astronauts")
     }
 }

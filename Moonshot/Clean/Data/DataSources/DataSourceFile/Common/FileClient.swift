@@ -10,7 +10,7 @@ import Foundation
 struct FileClient {
     func readData<T: Codable>(from filePath: String) throws -> T {
         guard let fileData = getJsonData(from: filePath) else {
-            fatalError("Cannot load \(filePath).json content")
+            throw DataError.cannotLoadContent(file: filePath)
         }
         
         return try JSONDecoder().decode(T.self, from: fileData)

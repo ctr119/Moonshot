@@ -23,13 +23,15 @@ class MissionsRepository {
     }
     
     func getMissions() -> [Mission] {
-        guard let missionsDTO = try? dataSource.getMissions() else {
+        do {
+            let missionsDTO = try dataSource.getMissions()
+            let astronauts = astronautsRepository.getAstronauts()
+            return missionsDTO.map {
+                missionConverter.convert(missionDto: $0, astronauts: astronauts)
+            }
+            
+        } catch {
             return []
-        }
-        let astronauts = astronautsRepository.getAstronauts()
-        
-        return missionsDTO.map {
-            missionConverter.convert(missionDto: $0, astronauts: astronauts)
         }
     }
 }

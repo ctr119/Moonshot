@@ -23,7 +23,7 @@ class AstronautsRepository {
                 partialResult[dictElement.key] = astronautDTO.toDomain
             }
         } catch {
-            fatalError()
+            return [:]
         }
     }
 }

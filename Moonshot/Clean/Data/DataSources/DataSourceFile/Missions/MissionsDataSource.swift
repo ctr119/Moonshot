@@ -14,11 +14,7 @@ class MissionsDataSource {
         self.client = client
     }
     
-    func getMissions() throws -> [MissionDTO] {        
-        guard let missionsDTO: [MissionDTO] = try? client.readData(from: "missions") else {
-            fatalError("Cannot decode missions")
-        }
-        
-        return missionsDTO
+    func getMissions() throws -> [MissionDTO] {
+        try client.readData(from: "missions")
     }
 }
