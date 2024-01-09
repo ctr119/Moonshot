@@ -148,11 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				206BA42D2B4785440036C240 /* AstronautsRepository.swift */,
-				206BA44E2B4CD2060036C240 /* DataError.swift */,
 				206BA4402B4CC8E40036C240 /* MissionsRepository.swift */,
 				206BA44B2B4CCED50036C240 /* Converters */,
 				206BA4242B47831F0036C240 /* DataSources */,
 				206BA4252B4783310036C240 /* DTOs */,
+				206BA4502B4CD3710036C240 /* Errors */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -243,6 +243,14 @@
 				206BA42F2B4787400036C240 /* AstronautDTO+Domain.swift */,
 			);
 			path = Converters;
+			sourceTree = "<group>";
+		};
+		206BA4502B4CD3710036C240 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				206BA44E2B4CD2060036C240 /* DataError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		20E9179A2B3B952100A49299 = {
