@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				206BA4312B4CA4180036C240 /* GetAstronautsUseCase.swift */,
-				206BA4282B4783520036C240 /* Models */,
 				206BA4492B4CCD590036C240 /* GetMissionsUseCase.swift */,
+				206BA4282B4783520036C240 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
