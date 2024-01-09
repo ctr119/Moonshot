@@ -9,14 +9,9 @@ import Foundation
 
 class AstronautsRepository {
     private let dataSource: FileDataSource
-    private let missionConverter: MissionConverter
     
-    init(
-        dataSource: FileDataSource = .init(),
-        missionConverter: MissionConverter = .init()
-    ) {
+    init(dataSource: FileDataSource = .init()) {
         self.dataSource = dataSource
-        self.missionConverter = missionConverter
     }
     
     func getAstronauts() -> [String: Astronaut] {
@@ -29,17 +24,6 @@ class AstronautsRepository {
             }
         } catch {
             fatalError()
-        }
-    }
-    
-    func getMissions() -> [Mission] {
-        guard let missionsDTO = try? dataSource.getMissions() else {
-            return []
-        }
-        let astronauts = getAstronauts()
-        
-        return missionsDTO.map {
-            missionConverter.convert(missionDto: $0, astronauts: astronauts)
         }
     }
 }
